@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox and Grid</title>
+    <style>
+      .box-flex {
+        padding: 10px;
+        background-color: greenyellow;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+      }
+      .box-flex div {
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        background-color: teal;
+        line-height: 50px;
+        text-align: center;
+      }
+
+      .box-grid div {
+        color: #fff;
+        background-color: teal;
+        text-align: center;
+        font-size: 18px;
+        padding: 20px;
+      }
+
+      .box-grid {
+        padding: 10px;
+        background-color: greenyellow;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        /* justify-content: space-around; */
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-flex">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="box-grid">
+      <div style="grid-column: 1 / 6">Header</div>
+      <div style="grid-column: 1 / 2">Menu</div>
+      <div style="grid-column: 2 / 5">Main</div>
+      <div style="grid-column: 5 / 6">Right</div>
+      <div style="grid-column: 1 / 6">Footer</div>
+    </div>
+    <div class="link-next" style="margin-top: 50px">
+      <a
+        style="
+          padding: 10px 20px;
+          background-color: #04aa6d;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 2px;
+        "
+        href="./shopee-clone/index.html"
+        >Next</a
+      >
+    </div>
+  </body>
+</html>

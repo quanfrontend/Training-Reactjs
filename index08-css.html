@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-elements selectors</title>
+    <style>
+      .pseudo-elements {
+        background-color: grey;
+        padding: 10px 20px;
+        color: #fff;
+      }
+
+      .test::before {
+        content: "before ";
+        color: yellow;
+      }
+
+      .test::after {
+        content: " after";
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pseudo-elements">
+      <p>
+        pseudo-elements: là phần tử giả css được sử dụng để tạo kiểu cho các
+        phần cụ thể của phần tử
+      </p>
+      <p>Phần tử giả có thể được kết hợp với các class HTML</p>
+      <p class="test">hoặc</p>
+    </div>
+    <div class="link-next" style="margin-top: 50px">
+      <a
+        style="
+          padding: 10px 20px;
+          background-color: #04aa6d;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 2px;
+        "
+        href="index09-css.html"
+        >Next</a
+      >
+    </div>
+  </body>
+</html>

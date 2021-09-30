@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Units</title>
+    <style>
+      body {
+        font-size: 24px;
+        margin: 0;
+      }
+      .unit {
+        padding: 20px;
+      }
+
+      #rem {
+        font-size: 1rem;
+      }
+      #em {
+        font-size: 1em;
+      }
+      #px {
+        font-size: 24px;
+      }
+      #vw {
+        background-color: teal;
+        color: #fff;
+        width: 100vw;
+      }
+      #vh {
+        background-color: brown;
+        color: #fff;
+        height: 50vh;
+      }
+      #percent {
+        background-color: blueviolet;
+        color: #fff;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="unit">
+      <p id="rem">
+        rem: Tương đối so với phần tử gốc. Phần tử gốc ở đây là thẻ html.
+      </p>
+      <p id="em">em: Tương đối so với font-size của phần tử cha.</p>
+      <p id="px">px: 1px tương ứng với một điểm ảnh trên máy tính..</p>
+      <p id="vw">
+        vw: Tương đối 1% width của kích thước cửa sổ trình duyệt (viewport).
+      </p>
+      <p id="vh">
+        vh: Tương đối 1% height của kích thước cửa sổ trình duyệt (viewport).
+      </p>
+      <p id="percent">%: Có giá trị tương đối so với phần tử cha.</p>
+    </div>
+    <div class="link-next" style="margin-top: 50px">
+      <a
+        style="
+          padding: 10px 20px;
+          background-color: #04aa6d;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 2px;
+        "
+        href="index15-css.html"
+        >Next</a
+      >
+    </div>
+  </body>
+</html>
