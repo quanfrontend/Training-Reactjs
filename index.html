@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training day 02</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+      :root {
+        --primary: #8a57e9;
+        --secondary: #4c75e6;
+        --white: #ffffff;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+      }
+      .list {
+        min-width: 300px;
+        list-style-type: none;
+      }
+      .item {
+        background-image: linear-gradient(
+          to right bottom,
+          var(--primary),
+          var(--secondary)
+        );
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .link {
+        text-decoration: none;
+        color: var(--white);
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="list">
+        <li class="item">
+          <a href="./shopee/index.html" class="link">Shopee</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
