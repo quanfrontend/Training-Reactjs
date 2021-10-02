@@ -1304,6 +1304,9 @@ body {
   }
 }
 @media (max-width: 415px) {
+  .header-footer {
+    margin: 0 -1rem;
+  }
   .list-category {
     grid-template-columns: unset;
     grid-gap: 1.5rem;
