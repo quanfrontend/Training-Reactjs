@@ -1080,7 +1080,7 @@ body {
   font-size: 1.4rem;
 }
 /* responsive */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .wrapper {
     padding-top: 12.5rem;
   }
