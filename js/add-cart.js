@@ -82,9 +82,9 @@ function renderProductsCart() {
           <h3>${productCart.name}</h3>
           <div class="price">$${productCart.price}.00</div>
           <div class="box-quantity">
-            <div class="fas fa-minus" id="minus"></div>
+            <div class="fas fa-minus""></div>
             <div class="number" id="number">${productCart.inCart}</div>
-            <div class="fas fa-plus" id="plus"></div>
+            <div class="fas fa-plus"></div>
           </div>
         </div>
       </div>
@@ -136,38 +136,45 @@ const onAddCart = (itemProduct) => {
   // Tính tổng tiền sản phẩm
   totalPrice();
 
-  const minus = document.querySelector("#minus");
-  const number = document.querySelector("#number");
-  const plus = document.querySelector("#plus");
-
-  // Tăng số lượng sản phẩm
-  function plusNumber() {
-    return plus.addEventListener("click", () => {
-      let numb = +number.textContent + 1;
-      console.log(numb);
-      return (number.textContent = numb);
-    });
-  }
-  plusNumber();
-
   // Giảm số lượng sản phẩm
-  function minusNumber() {
-    return minus.addEventListener("click", () => {
-      let numb = +number.textContent - 1;
-      if (numb === 0) {
-        itemProduct.inCart = 0;
-        renderProductsCart();
-      }
-      console.log(numb);
-      return (number.textContent = numb);
-    });
-  }
-  minusNumber();
+  const btnMinus = document.querySelectorAll(".fa-minus");
+  const btnPlus = document.querySelectorAll(".fa-plus");
+  const number = document.querySelector("#number");
 
-  // if (number.value == 0) {
-  //   productsCart[value].inCart = 0;
-  //   renderProductsCart();
-  // }
+  btnMinus.forEach((element, index) => {
+    btnMinus[index].addEventListener("click", () => {
+      onMinusClicked(productsCart[index]);
+    });
+  });
+
+  btnPlus.forEach((element, index) => {
+    btnPlus[index].addEventListener("click", () => {
+      onPlusClicked(productsCart[index]);
+    });
+  });
+
+  const onMinusClicked = (itemMinus) => {
+    if (itemMinus.inCart > 1) {
+      itemMinus.inCart -= 1;
+      number.textContent = itemMinus.inCart;
+      showNumber();
+      totalPrice();
+    } else {
+      productsCart.splice(itemMinus.id, 1);
+      showNumber();
+      renderProductsCart();
+      totalPrice();
+    }
+  };
+
+  const onPlusClicked = (itemPlus) => {
+    if (itemPlus.inCart >= 1) {
+      itemPlus.inCart += 1;
+      number.textContent = itemPlus.inCart;
+      showNumber();
+      totalPrice();
+    }
+  };
 };
 
 // Xóa sản phẩm trong giỏ hàng
