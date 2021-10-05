@@ -136,17 +136,38 @@ const onAddCart = (itemProduct) => {
   // Tính tổng tiền sản phẩm
   totalPrice();
 
-  // Tăng số lượng sản phẩm
-  // const minus = document.querySelector("#minus");
-  // const number = document.querySelector("#number");
-  // const plus = document.querySelector("#plus");
+  const minus = document.querySelector("#minus");
+  const number = document.querySelector("#number");
+  const plus = document.querySelector("#plus");
 
-  // function plusNumber() {
-  //   return plus.addEventListener("click", () => {
-  //     return (number.value += 1);
-  //   });
+  // Tăng số lượng sản phẩm
+  function plusNumber() {
+    return plus.addEventListener("click", () => {
+      let numb = +number.textContent + 1;
+      console.log(numb);
+      return (number.textContent = numb);
+    });
+  }
+  plusNumber();
+
+  // Giảm số lượng sản phẩm
+  function minusNumber() {
+    return minus.addEventListener("click", () => {
+      let numb = +number.textContent - 1;
+      if (numb === 0) {
+        itemProduct.inCart = 0;
+        renderProductsCart();
+      }
+      console.log(numb);
+      return (number.textContent = numb);
+    });
+  }
+  minusNumber();
+
+  // if (number.value == 0) {
+  //   productsCart[value].inCart = 0;
+  //   renderProductsCart();
   // }
-  // plusNumber();
 };
 
 // Xóa sản phẩm trong giỏ hàng
