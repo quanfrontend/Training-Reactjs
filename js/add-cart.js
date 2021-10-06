@@ -88,7 +88,7 @@ function renderProductsCart() {
                 id="count"
                 min="1"
                 max="100"
-                value="1"
+                value="${productCart.inCart}"
               />
         </div>
       </div>
@@ -108,7 +108,7 @@ function totalPrice() {
 // Hiển thị số sản phẩm thêm
 function showNumber() {
   let showNum = productsCart.reduce((a, b) => {
-    return a + b.inCart;
+    return a + +b.inCart;
   }, 0);
   return (numberCart.textContent = showNum);
 }
@@ -154,6 +154,7 @@ const onAddCart = (itemProduct) => {
     counts[index].addEventListener("change", () => {
       productsCart[index].inCart = counts[index].value;
       totalPrice();
+      showNumber();
     });
   });
 };
